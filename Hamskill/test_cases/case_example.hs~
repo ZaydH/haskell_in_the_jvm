@@ -1,0 +1,13 @@
+case_example :: Int -> [Char]
+case_example x = case (x) of
+                     (y>0) -> "Positive"
+                     (y< 0) -> "Negative"
+                     (y==0) -> "Zero"
+                     otherwise -> ((error "Something went wrong here"))
+
+main :: IO ()
+main = do
+       putStrLn $ ((case_example 99))
+       putStrLn $ ((case_example 0))
+       putStrLn $ ((case_example (-43) ))
+

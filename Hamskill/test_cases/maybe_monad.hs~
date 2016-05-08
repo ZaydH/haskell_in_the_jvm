@@ -1,0 +1,10 @@
+
+maybeAddOne :: Int -> (Maybe Int)
+maybeAddOne x = Just (x + 1)
+
+main :: IO ()
+main = do
+       x <- (Just 3) >>= maybeAddOne >>= maybeAddOne
+       putStrLn $ show $ x
+
+
